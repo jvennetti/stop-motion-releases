@@ -1,20 +1,44 @@
-# Stop Motion
+# Hop for testers
 
-Downloads for the Stop Motion desktop app (Windows). The newest installer is on the [Releases](https://github.com/jvennetti/stop-motion-releases/releases/latest) page.
+Hop is the new build of the stop-motion app. It replaces the old "Stop Motion" app
+(version 0.2.0) and uses the same project folders.
 
 ## Install
 
-1. Download `Stop-Motion-Setup-<version>.exe` from the latest release and run it.
-2. Windows SmartScreen shows "Windows protected your PC" because the app is not code-signed yet. Click "More info", then "Run anyway".
+1. Download the newest `Hop-<version>-win64-setup.exe` from
+   https://github.com/jvennetti/stop-motion-releases/releases/latest
+2. Run it. Windows may show "Windows protected your PC". Click **More info**, then
+   **Run anyway**. The installer is not signed yet, which is why Windows asks.
+3. Click through. No admin password is needed; Hop installs for your user only.
+4. A "Hop" shortcut lands on the desktop and in the Start menu.
+
+The old Stop Motion 0.2.0 stays installed unless you tick **Remove the old Stop
+Motion 0.2.0** in the installer. Either way your projects and settings stay.
+
+## Your projects
+
+Both apps use the same folder: `Documents\Stop Motion Projects`. A shot you made in the
+old app opens in Hop. Do not keep the same shot open in both apps at once.
 
 ## Updates
 
-The installed app checks this page when it starts and once an hour. When a newer version exists it shows a small "Update available" box at the bottom right. Click Update to download it in the background, then "Restart to update". Nothing downloads without that click.
+Hop checks for a newer version when it starts and shows a small box in the corner when
+there is one. Click Update; Hop installs it and comes back.
 
-## Source for the bundled FFmpeg
+## What to tell Joshua
 
-The app ships an LGPL build of FFmpeg. The matching source bundle (`ffmpeg-lgpl-source-<version>.zip`) is attached to every release, as the LGPL asks.
+When something goes wrong, send:
 
-## Feedback
+- what you did, what you expected, what happened instead
+- a screenshot if the screen looked wrong
+- the log file: press Win+R, paste `%APPDATA%\stop-motion-app`, press Enter, and send
+  `log.txt`
 
-Send notes, screenshots and the project folder that shows a problem to Joshua.
+Crashes are the obvious thing to report. Annoyances count too: "the buttons do nothing"
+was a real bug, found by a tester who said exactly that.
+
+## Cameras
+
+Webcams work out of the box. Canon EOS cameras connect over USB (plug the camera in,
+set a manual mode on the dial, pick it under Camera > Source), but this build has not
+been tried with a camera body yet. If you try it, tell Joshua how it went either way.
